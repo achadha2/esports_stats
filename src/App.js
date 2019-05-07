@@ -1,27 +1,47 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+// import logo from "./logo.svg";
+import "./App.css";
+import Leagues from "./Components/Leagues";
 
 class App extends Component {
+  state = {
+    leagues: []
+  };
+
+  componentDidMount = () => {
+    fetch("https://api.pandascore.co/leagues", {
+      method: "GET",
+      headers: {
+        authorization:
+          "Bearer mfKxPj5My_EFLxHopbETEg8vuhtz1rY6uwKHAzYqjvwJ0s6exMA"
+      }
+    })
+      .then(res => res.json())
+      .then(json => this.handleLeagues(json));
+  };
+
+  handleLeagues = leagues => {
+    this.setState({
+      leagues: leagues
+    });
+  };
+
+  displayLeagues = () => {
+    if (this.state.leagues.length > 0) {
+      return this.state.leagues.map(league => {
+        if (league.image_url !== null || "") {
+          // debugger;
+          // debugger;
+          return <Leagues league={league} />;
+        }
+      });
+    } else {
+      return <div> loading... </div>;
+    }
+  };
+
   render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+    return <div className="App">{this.displayLeagues()}</div>;
   }
 }
 
