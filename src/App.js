@@ -7,18 +7,18 @@ class App extends Component {
   state = {
     leagues: []
   };
-
-  componentDidMount = () => {
-    fetch("https://api.pandascore.co/leagues", {
-      method: "GET",
-      headers: {
-        authorization:
-          "Bearer mfKxPj5My_EFLxHopbETEg8vuhtz1rY6uwKHAzYqjvwJ0s6exMA"
-      }
-    })
-      .then(res => res.json())
-      .then(json => this.handleLeagues(json));
-  };
+  // ------------ Fetch function standard----------------------------------
+  // componentDidMount = () => {
+  //   fetch("https://api.pandascore.co/leagues", {
+  //     method: "GET",
+  //     headers: {
+  //       authorization:
+  //         (insert bearer here)
+  //     }
+  //   })
+  //     .then(res => res.json())
+  //     .then(json => this.handleLeagues(json));
+  // };
 
   handleLeagues = leagues => {
     this.setState({
