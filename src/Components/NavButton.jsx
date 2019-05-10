@@ -1,5 +1,7 @@
 import React from "react";
 
 export default class NavButton extends React.Component {
-  render() {}
+  render() {
+    return <div>NavBarItem</div>;
+  }
 }
