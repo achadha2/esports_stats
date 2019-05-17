@@ -27,19 +27,17 @@ class App extends Component {
     });
   };
 
-  displayLeagues = () => {
-    if (this.state.leagues.length > 0) {
-      return this.state.leagues.map(league => {
-        if (league.image_url !== null || "") {
-          // debugger;
-          // debugger;
-          return <Leagues league={league} />;
-        }
-      });
-    } else {
-      return <div> loading... </div>;
-    }
-  };
+  // displayLeagues = () => {
+  //   if (this.state.leagues.length > 0) {
+  //     return this.state.leagues.map(league => {
+  //       if (league.image_url !== null || "") {
+  //         return <Leagues league={league} />;
+  //       }
+  //     });
+  //   } else {
+  //     return <div> loading... </div>;
+  //   }
+  // };
 
   render() {
     return (

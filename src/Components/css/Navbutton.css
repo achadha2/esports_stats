@@ -1,5 +1,13 @@
 .navbutton {
+  display: flex;
   height: 100%;
   margin: 0px 10px;
+  background-color: gray;
   /* align-self: center; */
+}
+
+.navimg {
+  height: 100%;
+  width: auto;
+  color: white;
 }
