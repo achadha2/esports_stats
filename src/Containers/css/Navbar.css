@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
+  flex-direction: row-reverse;
   width: 100vw;
-  height: 8vh;
-  background-color: black;
+  height: 15vh;
+  background-color: white;
   color: white;
   align-items: center;
 }

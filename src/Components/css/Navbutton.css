@@ -1,13 +1,43 @@
 .navbutton {
   display: flex;
+  width: 20vw;
   height: 100%;
-  margin: 0px 10px;
-  background-color: gray;
+  margin: 0px;
   /* align-self: center; */
+  perspective: 2000px;
+  -webkit-perspective: 2000px;
+  justify-content: center;
+  border-bottom-style: solid;
+  border-color: black;
+  border-width: 6px;
 }
 
 .navimg {
   height: 100%;
-  width: auto;
   color: white;
+}
+
+.navbutton:nth-child(1) {
+  background-color: red;
+}
+
+.navbutton:nth-child(2) {
+  background-color: navy;
+}
+
+.navbutton:nth-child(3) {
+  background-color: green;
+}
+
+.navbutton:nth-child(4) {
+  background-color: orange;
+}
+
+.navbutton:nth-child(5) {
+  background-color: aqua;
+}
+
+img {
+  max-width: 13vw;
+  height: auto;
 }
