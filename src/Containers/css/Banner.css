@@ -1,0 +1,31 @@
+.bannercontainer {
+  display: flex;
+  height: 25vw;
+  width: 90vw;
+  margin-top: 20px;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  justify-content: center;
+  overflow: hidden;
+  border-style: groove;
+}
+
+img {
+  width: 90vw;
+}
+
+@media only screen and (max-width: 800px) {
+  .bannercontainer {
+    display: flex;
+    height: 50vw;
+    width: 100vw;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    justify-content: center;
+    border-style: none;
+  }
+  img {
+    width: 98vw;
+  }
+}

@@ -3,10 +3,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Leagues from "./Components/Leagues";
 import Navbar from "./Containers/NavBar";
+import BannerContainer from "./Containers/BannerContainer";
 
 class App extends Component {
   state = {
-    leagues: []
+    leagueName: "home"
   };
   // ------------ Fetch function standard----------------------------------
   // componentDidMount = () => {
@@ -21,17 +22,27 @@ class App extends Component {
   //     .then(json => this.handleLeagues(json));
   // };
 
-  handleLeagues = leagues => {
+  // handleLeagues = leagues => {
+  //   this.setState({
+  //     leagues: leagues
+  //   });
+  // };
+
+  checkLeague = (e, leagueName) => {
     this.setState({
-      leagues: leagues
+      leagueName: leagueName
     });
+    console.log(this.state.leagueName);
   };
 
   render() {
     return (
       <div className="App">
         <div>
-          <Navbar />
+          <Navbar checkLeague={this.checkLeague} />
+        </div>
+        <div>
+          <BannerContainer />
         </div>
       </div>
     );

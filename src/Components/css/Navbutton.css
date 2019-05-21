@@ -8,16 +8,13 @@
   -webkit-perspective: 2000px;
   justify-content: center;
   align-items: center;
-  border-bottom-style: solid;
-  border-color: transparent;
-  border-width: 6px;
-  border-radius: 0px;
   overflow: hidden;
   /* transition-property: background, border-radius, border; */
 }
 
 .navimg {
-  height: 100%;
+  height: auto;
+  max-width: 13vw;
 }
 
 .navbutton:nth-child(1) {
@@ -73,7 +70,17 @@
   }
 }
 
-img {
-  max-width: 13vw;
-  height: auto;
+@media only screen and (max-width: 800px) {
+  .navbutton {
+    display: flex;
+    flex: 0 0 auto;
+    width: 49vw;
+    height: 10vh;
+    margin: 0px;
+    perspective: 2000px;
+    -webkit-perspective: 2000px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 }
