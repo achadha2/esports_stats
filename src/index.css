@@ -6,7 +6,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background: repeating-linear-gradient(
+    0deg,
+    hsla(247, 2%, 22%, 1),
+    hsla(247, 2%, 22%, 1) 35px,
+    hsla(247, 2%, 16%, 1) 35px,
+    hsla(247, 2%, 16%, 1) 70px
+  );
 }
 
 * {
