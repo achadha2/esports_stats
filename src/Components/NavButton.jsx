@@ -9,7 +9,7 @@ export default class NavButton extends React.Component {
           className="navimg"
           src={this.props.logo}
           onClick={e => this.props.checkLeague(e, this.props.leagueName)}
-          alt="lul"
+          alt="banner_image"
         />
       </div>
     );
