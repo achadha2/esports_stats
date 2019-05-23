@@ -7,37 +7,80 @@
   perspective: 2000px;
   -webkit-perspective: 2000px;
   justify-content: center;
-  border-bottom-style: solid;
-  border-color: black;
-  border-width: 6px;
+  align-items: center;
+  overflow: hidden;
+  /* transition-property: background, border-radius, border; */
 }
 
 .navimg {
-  height: 100%;
-  color: white;
+  height: auto;
+  max-width: 13vw;
 }
 
 .navbutton:nth-child(1) {
   background-color: red;
 }
 
+.navbutton:nth-child(1):hover img {
+  animation: focus 0.1s forwards;
+}
+
 .navbutton:nth-child(2) {
   background-color: navy;
+}
+
+.navbutton:nth-child(2):hover img {
+  animation: focus 0.1s forwards;
 }
 
 .navbutton:nth-child(3) {
   background-color: green;
 }
 
+.navbutton:nth-child(3):hover {
+  background-color: green;
+}
+
+.navbutton:nth-child(3):hover img {
+  animation: focus 0.1s forwards;
+}
+
 .navbutton:nth-child(4) {
   background-color: orange;
+  opacity: 1;
+}
+.navbutton:nth-child(4):hover img {
+  animation: focus 0.1s forwards;
 }
 
 .navbutton:nth-child(5) {
+  z-index: 1;
   background-color: aqua;
 }
 
-img {
-  max-width: 13vw;
-  height: auto;
+.navbutton:nth-child(5):hover img {
+  animation: focus 0.1s forwards;
+}
+
+@-webkit-keyframes focus {
+  100% {
+    width: 120%;
+    height: auto;
+    max-width: 15vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .navbutton {
+    display: flex;
+    flex: 0 0 auto;
+    width: 49vw;
+    height: 10vh;
+    margin: 0px;
+    perspective: 2000px;
+    -webkit-perspective: 2000px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 }
