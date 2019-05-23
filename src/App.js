@@ -32,7 +32,6 @@ class App extends Component {
     this.setState({
       leagueName: leagueName
     });
-    console.log(this.state.leagueName);
   };
 
   render() {
@@ -42,7 +41,7 @@ class App extends Component {
           <Navbar checkLeague={this.checkLeague} />
         </div>
         <div>
-          <BannerContainer />
+          <BannerContainer league={this.state.leagueName} />
         </div>
       </div>
     );

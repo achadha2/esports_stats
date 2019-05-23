@@ -1,6 +1,6 @@
 .navbar {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   width: 100vw;
   height: 15vh;
   background-color: white;
