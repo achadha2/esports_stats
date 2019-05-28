@@ -6,13 +6,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: repeating-linear-gradient(
-    0deg,
+  /* background: repeating-linear-gradient(
+    90deg,
     hsla(247, 2%, 22%, 1),
     hsla(247, 2%, 22%, 1) 35px,
     hsla(247, 2%, 16%, 1) 35px,
     hsla(247, 2%, 16%, 1) 70px
-  );
+  ); */
+  background-color: hsla(247, 2%, 16%, 1);
+  /* background-color: hsla(247, 2%, 22%, 1); */
 }
 
 * {
