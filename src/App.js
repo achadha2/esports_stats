@@ -4,29 +4,12 @@ import "./App.css";
 import Leagues from "./Components/Leagues";
 import Navbar from "./Containers/NavBar";
 import BannerContainer from "./Containers/BannerContainer";
+import GameContainer from "./Containers/GameContainer";
 
 class App extends Component {
   state = {
     leagueName: "home"
   };
-  // ------------ Fetch function standard----------------------------------
-  // componentDidMount = () => {
-  //   fetch("https://api.pandascore.co/leagues", {
-  //     method: "GET",
-  //     headers: {
-  //       authorization:
-  //         (insert bearer here)
-  //     }
-  //   })
-  //     .then(res => res.json())
-  //     .then(json => this.handleLeagues(json));
-  // };
-
-  // handleLeagues = leagues => {
-  //   this.setState({
-  //     leagues: leagues
-  //   });
-  // };
 
   checkLeague = (e, leagueName) => {
     this.setState({
@@ -42,6 +25,9 @@ class App extends Component {
         </div>
         <div>
           <BannerContainer league={this.state.leagueName} />
+        </div>
+        <div>
+          <GameContainer />
         </div>
       </div>
     );
