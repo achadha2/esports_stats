@@ -209,4 +209,4 @@ console.log(leader_board.top(l));
 // console.log(array_equals(leader_board.top(2), [3, 2]))
 // leader_board.reset(3)
 // console.log('After reset top 3 [' + leader_board.top(3) + '] should equal [2, 1, 3]')
-// console.log(array_equals(leader_board.top(3), [2, 1, 3]))
+console.log(array_equals(leader_board.top(3), [2, 1, 3]));
